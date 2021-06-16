@@ -1,0 +1,12 @@
+keycloak:
+  auth-server-url: http://localhost:3001/auth
+  realm: SpringBootKeycloak
+  resource: login-app
+  public-client: true
+
+  security-constraints:
+    - authRoles:
+        - user
+      securityCollections:
+        - patterns:
+            - /keycloak/*
